@@ -1,0 +1,150 @@
+﻿                //for (int i = 1; i < 6; i++) {
+                //    var pedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt()) + (2 * i);
+                //        SinglePrimalization(pedearyNumber, 24);
+                //}
+
+                //var gedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt()) + 2;
+                //SinglePrimalization(gedearyNumber, 4);
+
+                //var hedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt()) - 4;
+                //SinglePrimalization(hedearyNumber, 5);
+
+                //var jedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt()) + 4;
+                //SinglePrimalization(jedearyNumber, 6);
+
+                //var kedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt()) - 5;
+                //SinglePrimalization(kedearyNumber, 7); // 0 of 1000
+
+                //var ledearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt()) + 5;
+                //SinglePrimalization(ledearyNumber, 8); // 0 of 1000
+
+                //var eedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() / 6);
+                //SinglePrimalization(eedearyNumber, 9); // 0 of 1000
+
+                //var redearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() / 6) - 1;
+                //SinglePrimalization(redearyNumber, 10); // 0 of 1000
+
+                //var qedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() / 6) + 1;
+                //SinglePrimalization(qedearyNumber, 11); // 0 of 1000
+
+                //var eedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() / 2);
+                //SinglePrimalization(eedearyNumber, 12); // 0 of 1000
+
+                //var redearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() / 2) - 1;
+                //SinglePrimalization(redearyNumber, 13); // 0 of 1000
+
+                //var qedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() / 2) + 1;
+                //SinglePrimalization(qedearyNumber, 14); // 0 of 1000
+
+                //var eedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() * 3);
+                //SinglePrimalization(eedearyNumber, 15); // 0 of 1000
+
+                //var redearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() * 3) - 1;
+                //SinglePrimalization(redearyNumber, 16); // 0 of 1000
+
+                //var qedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber.Sqrt() * 3) + 1;
+                //SinglePrimalization(qedearyNumber, 17); // 0 of 1000
+
+                //var eedearyNumber = BigInteger.Pow(primaryNumber, (int)_testedIndex.Sqrt());
+                //SinglePrimalization(eedearyNumber, 18); // 0 of 1000
+
+                //var redearyNumber = BigInteger.Pow(primaryNumber, (int)_testedIndex.Sqrt()) - 1;
+                //SinglePrimalization(redearyNumber, 19); // 0 of 1000
+
+                //var qedearyNumber = BigInteger.Pow(primaryNumber, (int)_testedIndex.Sqrt()) + 1;
+                //SinglePrimalization(qedearyNumber, 20);
+
+                //var eedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber / 3);
+                //SinglePrimalization(eedearyNumber, 21); // 0 of 1000
+
+                //var redearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber / 3) - 1;
+                //SinglePrimalization(redearyNumber, 22); // 0 of 1000
+
+                //var iedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber / 3) + 1;
+                //SinglePrimalization(iedearyNumber, 23); // 0 of 1000
+
+                //for (int i = 1; i < 6; i++) {
+                //    var pedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber / (3 * i)) + 1;
+                //    SinglePrimalization(pedearyNumber, 24);
+                //}
+
+                //var eedearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber / 6);
+                //SinglePrimalization(eedearyNumber, 24);
+
+                //var redearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber / 6) - 1;
+                //SinglePrimalization(redearyNumber, 25);
+
+                //var medearyNumber = BigInteger.Pow(primaryNumber, (int)primaryNumber / 6) + 1;
+                //SinglePrimalization(medearyNumber, 26);
+
+                //if (_primeNumbers.Any(x => x.Number == primaryNumber.ToString())) {
+                //    var zerothNumber = primaryNumber;
+                //    var numberOfDigits = zerothNumber.NumberOfDigits();
+                //    var digitCount = 0;
+
+                //    for (int i = 0; i < numberOfDigits; i++) {
+                //        zerothNumber = zerothNumber.SwitchLast();
+                //        digitCount++;
+
+                //        SinglePrimalization(zerothNumber, digitCount + 10);
+                //    }
+                //}
+
+                //var zerothNumber = primaryNumber;
+                //var numberOfDigits = zerothNumber.NumberOfDigits();
+                //var digitCount = 0;
+
+                //while (zerothNumber.NumberOfDigits() > 1) {
+                //    zerothNumber = zerothNumber.SwitchLast();
+                //    digitCount++;
+
+                //    if (zerothNumber == 0) {
+                //        break;
+                //    }
+
+                //    //SinglePrimalization(zerothNumber, digitCount + 20);
+
+                //    var zenithNumber = zerothNumber * zerothNumber.SumOfDigits();
+                //    if (!_primeNumbers.Any(x => x.Number == zenithNumber.ToString())) {
+                //        if (zenithNumber.IsSpecial()) {
+                //            SinglePrimalization(zenithNumber, 55);
+                //        }
+                //    }
+                //}
+
+                //var secondNumber = primaryNumber + primaryNumber.SumOfDigits();
+
+                //if (!_primeNumbers.Any(x => x.Number == secondNumber.ToString())) {
+                //    if (secondNumber.IsSpecial()) {
+                //        SinglePrimalization(secondNumber, 0);
+                //    }
+                //}
+
+                //if (!_primeNumbers.Any(x => x.Number == primaryNumber.ToString())) {
+                //    var zerothNumber = secondNumber;
+                //    var numberOfDigits = zerothNumber.NumberOfDigits();
+                //    var digitCount = 0;
+
+                //    for (int i = 0; i < numberOfDigits - 1; i++) {
+                //        zerothNumber = zerothNumber.SwitchLast();
+                //        digitCount++;
+
+                //        SinglePrimalization(zerothNumber, digitCount + 20);
+                //    }
+                //}
+
+                //var thirdNumber = secondNumber.ToImperfect();
+
+                //if (!_primeNumbers.Any(x => x.Number == thirdNumber.ToString())) {
+                //    if (thirdNumber.IsSpecial()) {
+                //        SinglePrimalization(thirdNumber, 1);
+                //    }
+                //}
+
+                //var fourthNumber = secondNumber.ToSpecial();
+
+                //if (!_primeNumbers.Any(x => x.Number == fourthNumber.ToString())) {
+                //    if (fourthNumber.IsSpecial()) {
+                //        SinglePrimalization(fourthNumber, 2);
+                //    }
+                //}
