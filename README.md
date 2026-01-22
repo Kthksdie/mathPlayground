@@ -11,7 +11,7 @@ The C# .NET workspace containing prototypes and experiments.
 
 
 ### [`/python`](./python)
-TODO
+The python workspace containing prototypes and experiments.
 
 #### Projects
 -   **`reverseMultiply.py`**: A CLI-based port of the core logic from C# [`/cs/Numberality.Con/Components/ReverseMultiply.cs`](./cs/Numberality.Con/Components/ReverseMultiply.cs)
