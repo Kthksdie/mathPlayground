@@ -1,7 +1,20 @@
-# Reverse Multiply (Python)
+# Math Playground Python Scripts
 
-A CLI-based port of the core logic from:
-- [`/cs/Numberality.Con/Components/ReverseMultiply.cs`](./cs/Numberality.Con/Components/ReverseMultiply.cs)
+This directory contains Python ports of the C# components found in the parent repository.
+
+## Scripts
+
+### 1. Reverse Multiply (`reverseMultiply.py`)
+A direct port of the logic from:
+- [`/cs/Numberality.Con/Components/ReverseMultiply.cs`](../cs/Numberality.Con/Components/ReverseMultiply.cs)
+
+**Method:** Digit-by-digit reconstruction using a stack of "Prospects" to match suffixes.
+
+### 2. Unmultiply (`unmultiply.py`)
+A direct port of the logic from:
+- [`/cs/TestingNumbers/Components/Unmultiply.cs`](../cs/TestingNumbers/Components/Unmultiply.cs)
+
+**Method:** Factors using a combination of wheel-based search near the square root and a logic to find potential factors by reconstructing suffixes (Stack-based DFS).
 
 ## Requirements
 
@@ -9,21 +22,28 @@ A CLI-based port of the core logic from:
 
 ## Usage
 
+Both scripts share the same command-line interface.
+
 ### 1. Factorize a specific number
 
-To factorize a known number (e.g., product of two primes):
+To factorize a known number:
 
 ```bash
-python reverse_multiply.py --number <your_number>
+# Using Reverse Multiply
+python reverseMultiply.py --number <your_number>
+
+# Using Unmultiply
+python unmultiply.py --number <your_number>
 ```
 
 **Example:**
 ```bash
-python reverse_multiply.py --number 8051
+python unmultiply.py --number 8051
 # Output:
 # Solving for N = 8051
 # ...
-# Solution Found: 83 * 97 = 8051
+# Solution Found: 8051
+# Factors: 83, 97
 ```
 
 ### 2. Generate and Factorize
@@ -31,24 +51,19 @@ python reverse_multiply.py --number 8051
 To generate a random target (product of two probable primes) and immediately attempt to factorize it:
 
 ```bash
-python reverse_multiply.py --rng-digits <total_digits>
+python reverseMultiply.py --rng-digits <total_digits>
+# OR
+python unmultiply.py --rng-digits <total_digits>
 ```
 
 **Example:**
 ```bash
-python reverse_multiply.py --rng-digits 10
+python unmultiply.py --rng-digits 10
 # Output:
 # Generating probable primes roughly 5 digits long...
 # Generated target: ...
 # Solving for N = ...
 ```
-
-## How it works
-
-The script uses a digit-by-digit reconstruction method:
-1.  It calculates the target digits (modulo $10^k$) that the product must meet.
-2.  It maintains a stack of "Prospects" (pairs of potential factor suffixes).
-3.  It iteratively extends these prospects, keeping only those whose product matches the target digits of $N$.
 
 ---
 *Created with ❤️ by a [Gemini](https://gemini.google.com).*
