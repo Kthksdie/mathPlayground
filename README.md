@@ -16,6 +16,8 @@ The python workspace containing prototypes and experiments.
 #### Projects
 -   **`reverseMultiply.py`**: A CLI-based port of the core logic from C# [`/cs/Numberality.Con/Components/ReverseMultiply.cs`](./cs/Numberality.Con/Components/ReverseMultiply.cs)
 
+-   **`unmultiply.py`**: A CLI-based port of the core logic from C# [`/cs/Numberality.Con/Components/Unmultiply.cs`](./cs/Numberality.Con/Components/Unmultiply.cs)
+
 ## License
 
 [@jasonlee2122](https://x.com/jasonlee2122) for details.
