@@ -20,13 +20,46 @@ namespace PowersOfPrimes {
             Console.CursorVisible = false;
             Console.ForegroundColor = _defaultFontColor;
 
+            Execute();
             //Testing_1();
             //Testing_2();
             //Testing_3();
-            Testing_4();
-            //Execute();
+            //Testing_4();
 
             Prompt();
+        }
+
+        public static void Execute() {
+            var checkWatch = new Stopwatch();
+
+            var testedCount = BigInteger.Zero;
+            var positiveCount = BigInteger.Zero;
+            foreach (var powerOf in Numberality.PowersOf(3, 0)) {
+                var canidate = powerOf.Value - (powerOf.Base - 1);
+                var details = $"{powerOf.Base}^{powerOf.Exponent}-{(powerOf.Base - 1)}";
+
+                var numOfDigits = canidate.NumberOfDigits();
+                Print(0, $" {details} | Digits {numOfDigits} | Tested {testedCount} | Positive {positiveCount}");
+
+                checkWatch.Restart();
+
+                if (canidate.CheckPrimality(powerOf.Base, powerOf.Exponent)) {
+                    checkWatch.Stop();
+
+                    Print(5, $" {details} | Digits {numOfDigits} | {checkWatch.Elapsed}", ConsoleColor.Blue);
+                    positiveCount++;
+                }
+                else {
+                    checkWatch.Stop();
+
+                    Print(5, $" {details} | Digits {numOfDigits} | {checkWatch.Elapsed}");
+                }
+
+                testedCount++;
+                if (testedCount > 5000) {
+                    break;
+                }
+            }
         }
 
         public static void Testing_1() {
@@ -232,62 +265,6 @@ namespace PowersOfPrimes {
 
                 Prompt();
                 n++;
-            }
-        }
-
-        public static void Execute() {
-            var checkWatch = new Stopwatch();
-
-            var primeExponents = new List<BigInteger>();
-
-            var testedCount = BigInteger.Zero;
-            var positiveCount = BigInteger.Zero;
-
-            // I'm skipping double validating with Probable check.
-            // Results are already in OEIS for the numbers we're checking, will cross reference anyway.
-            var falsePositiveCount = BigInteger.Zero;
-            var falseNegitiveCount = BigInteger.Zero;
-
-            foreach (var powerOf in Numberality.PowersOf(3, 0)) {
-                //if (!powerOf.IsPrimeExponent()) {
-                //    continue;
-                //}
-
-                //var canidate = (powerOf.Value - 1) / (powerOf.Base - 1);
-                //var details = $"{powerOf.Base}^{powerOf.Exponent}/{(powerOf.Base - 1)}";
-
-                var canidate = powerOf.Value - (powerOf.Base - 1);
-                var details = $"{powerOf.Base}^{powerOf.Exponent}-{(powerOf.Base - 1)}";
-
-                var numOfDigits = canidate.NumberOfDigits();
-                Print(0, $" {details} | Digits {numOfDigits} | Tested {testedCount} | Positive {positiveCount}");
-                Print(1, $" {details} | {string.Join(", ", primeExponents)}");
-
-                checkWatch.Restart();
-
-                if (canidate.CheckPrimality(powerOf.Base, powerOf.Exponent)) {
-                    checkWatch.Stop();
-
-                    if (!primeExponents.Contains(powerOf.Exponent)) {
-                        primeExponents.Add(powerOf.Exponent);
-                    }
-
-                    Print(5, $" {details} | Digits {numOfDigits} | {checkWatch.Elapsed}", ConsoleColor.Blue);
-                    positiveCount++;
-
-                    //Save(details, canidate);
-                }
-                else {
-                    checkWatch.Stop();
-
-                    Print(5, $" {details} | Digits {numOfDigits} | {checkWatch.Elapsed}");
-                }
-
-                //Prompt();
-                testedCount++;
-                if (testedCount > 5000) {
-                    break;
-                }
             }
         }
 

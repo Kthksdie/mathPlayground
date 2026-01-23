@@ -163,7 +163,7 @@ namespace PowersOfPrimes.Components {
             var a = baseOf == 2 ? new BigInteger(3) : new BigInteger(2);
 
             var v = BigInteger.Pow(a, (int)baseOf);
-  // Early return for too small values
+            // Early return for too small values
             if (v > canidate)
             {
                 return false; // Too small for this method, but may be             prime.

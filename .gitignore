@@ -1,0 +1,28 @@
+# General
+.DS_Store
+Thumbs.db
+
+# Visual Studio / C#
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.pdb
+*.cache
+*.dll
+*.exe
+TestResults/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.manifest
+venv/
+env/
+.env
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
