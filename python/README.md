@@ -66,4 +66,4 @@ python unmultiply.py --rng-digits 10
 ```
 
 ---
-*Created with ❤️ by a [Gemini](https://gemini.google.com).*
+*Created with [Gemini](https://gemini.google.com) by [Kthksdie](https://x.com/jasonlee2122).*
